@@ -3,7 +3,7 @@ public class EggDrop {
         //for simplicity we will have 2 eggs
         int eggs = 2;
         //and 6 floors
-        int floors = 10;
+        int floors = 6;
 
         System.out.println("Minimum required number of trials with " + eggs + " eggs and " + floors + " floors is " + determine(eggs, floors));
     }
