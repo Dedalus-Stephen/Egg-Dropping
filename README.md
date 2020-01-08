@@ -19,7 +19,7 @@ The array will be filled in the following way:
 
 **Every time calculating d(n, x) we will start dropping eggs from the first floor up to current floor:**
 
-Initialize current floor's result value as -Infinity. *table[n][x] = Integer.MIN_VALUE*
+Initialize current floor's result value as +Infinity. *table[n][x] = Integer.MAX_VALUE*
 
 On every try we face one of the following cases:
 
