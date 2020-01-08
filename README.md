@@ -23,7 +23,7 @@ Initialize current floor's result value as +Infinity. *table[n][J] = Integer.MAX
 
 On every try we face one of the following cases:
 
-*x is a number from {1...J}*
+*(x is a number from {1...J})*
 
 Case(1): if egg breaks, then we are left with n-1 eggs and x-1 floors -> *table[n-1][x-1]*
 
