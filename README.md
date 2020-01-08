@@ -17,15 +17,17 @@ We will build in a bottom-up manner a table (2D array) of size [N+1][F+1] that w
 The array will be filled in the following way:
 
 
-**Every time calculating d(n, x) we will start dropping eggs from the first floor up to current floor:**
+**Every time calculating d(n, J) we will start dropping eggs from the first floor up to current floor:**
 
-Initialize current floor's result value as +Infinity. *table[n][x] = Integer.MAX_VALUE*
+Initialize current floor's result value as +Infinity. *table[n][J] = Integer.MAX_VALUE*
 
 On every try we face one of the following cases:
+
+*x is a number from {1...J}*
 
 Case(1): if egg breaks, then we are left with n-1 eggs and x-1 floors -> *table[n-1][x-1]*
 
 Case(2): if egg doesn't break, then we are left with n eggs and J-x floors. (where J is a current floor we calculating value for) -> *table[n][J-x]*
 
-Since we need the worst case scenario for the particular floor and yet the minimum number of trials we should take maximum of the two cases -> *res = max(case(1), case(2)) +1* and then minimum between current floor's value and result - > *min(res, table[n-1[x-1])*
+Since we need the worst case scenario for the particular floor and yet the minimum number of trials we should take maximum of the two cases -> *res = max(case(1), case(2)) +1* and then minimum between current floor's value and result - > *min(res, table[n][J])*
 
